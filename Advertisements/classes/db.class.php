@@ -5,7 +5,7 @@
         private $host = "localhost";
         private $user = "root";
         private $pwd = "";
-        private $dbName = "advertisments";
+        private $dbName = "advertisements";
 
         protected function connect() {
             $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;

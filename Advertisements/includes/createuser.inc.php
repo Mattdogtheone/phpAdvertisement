@@ -1,5 +1,6 @@
 <?php  
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['uname'];
     
     include "../classes/db.class.php";
@@ -9,6 +10,7 @@
     $userContrObj = new UsersController();
     $userContrObj->createUser($name);
 
-    header("location: ../index.php");
+    header("location: ../users");
+}
 ?>
 

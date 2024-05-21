@@ -7,7 +7,10 @@
             return $results;
         }
 
-        
+        public function showNumberOfAds() {
+            $results = $this->getNumberOfAds();
+            return $results;
+        }
     }
 
 ?>
