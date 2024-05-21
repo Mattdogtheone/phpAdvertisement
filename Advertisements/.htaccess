@@ -1,0 +1,5 @@
+RewriteEngine ON
+
+RewriteRule ^users?$ users.php
+
+RewriteRule ^advertisements?$ advertisements.php
