@@ -44,7 +44,7 @@ class AdvertisementService {
      * @param int $userId Data that has been passed down by the controller
      * @param string $title Data that has been passed down by the controller
      * 
-     * @return function createAdvertisement() Returns the function from Advertisement class (Model) to the Controller
+     * @return function createAdvertisement($userId, $title) Returns the function from Advertisement class (Model) to the Controller
      */
 
     public function createAdvertisement($userId, $title) {

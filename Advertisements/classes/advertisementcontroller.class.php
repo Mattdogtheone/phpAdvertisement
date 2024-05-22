@@ -14,9 +14,7 @@ class AdvertisementController {
 
     /**
      * 
-     * function __construct
-     * This is the constructor of the class, which initializes the protected variable $advertisementService. The variable 
-     * becomes an object of the class AdvertisementService
+     * This is the constructor of the class, which initializes the protected variable $advertisementService. The variable becomes an object of the class AdvertisementService
      * 
      * @param AdvertisementService $advertisementService Initialization of the variable as an object of AdvertisementService
      */
@@ -28,8 +26,7 @@ class AdvertisementController {
     /**
      * 
      * function showAllAdvertisements()
-     * This function is calling the getAllAdvertisements() which is in the function in the AdvertisementService 
-     * through the object $advertisementService
+     * This function is calling the getAllAdvertisements() which is in the function in the AdvertisementService through the object $advertisementService
      * 
      * @return array $advertisements Returns an array of data from advertisements and users table. The array has two keys named 'name' from the users table  and 'title' from the advertisements table
      */
@@ -42,8 +39,7 @@ class AdvertisementController {
     /**
      * 
      * function createAdvertisement()
-     * This function is calling the createAdvertisement() function in the AdvertisementService
-     * through the object $advertisementService
+     * This function is calling the createAdvertisement() function in the AdvertisementService through the object $advertisementService
      * 
      * @param int $userId Data that the user had chosen from the users table
      * @param string $title Data that the user gave as a text input

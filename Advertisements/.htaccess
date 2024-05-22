@@ -1,5 +1,7 @@
 RewriteEngine ON
 
-RewriteRule ^users?$ users.php
+RewriteRule ^users?$ usersview.php
 
-RewriteRule ^advertisements?$ advertisements.php
+RewriteRule ^advertisements?$ advertisementsview.php
+
+RewriteRule ^home?$ index.php
