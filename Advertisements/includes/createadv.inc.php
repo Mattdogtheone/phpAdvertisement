@@ -6,13 +6,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $userid = $_POST['dropdown'];
 
+    echo $title . $userid;
+
     include "../classes/db.class.php";
-    include "../classes/advertisements.class.php";
+    include "../classes/advertisement.class.php";
+    include "../classes/advertisementservice.class.php";
     include "../classes/advertisementcontroller.class.php";
 
-    $advContObj = new AdvertisementController();
-    $advContObj->createAdvertisement($userid, $title);
-    var_dump($advContObj);
+    $advModel = new Advertisement();
+    $advService = new AdvertisementService($advModel);
+    $advController = new AdvertisementController($advService);
+    $advController->createAdvertisement($userid, $title);
 
     header("location: ../advertisements");
 

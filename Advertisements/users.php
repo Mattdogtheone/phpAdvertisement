@@ -27,11 +27,13 @@
     <table class="styled-table">
         <tr>
             <th>UserName</th>
-
         </tr>
+        
         <?php
-            $usersObj = new UsersView();
-            $resutls = $usersObj->showUsers();
+            $userModel = new User();
+            $userService = new UserService($userModel);
+            $userController = new UserController($userService);
+            $resutls = $userController->showAllUsers();
 
             foreach($resutls as $row){
                 echo "<tr><td>" . $row["name"] . "</td></tr>";
@@ -55,5 +57,21 @@
         </form>
     </div>
     
+    <script>
+        function sendData(id) {
+            var form = document.createElement("form");
+            form.method = "POST";
+            form.action = "updateanddeleteusers.php";
+
+            var input = document.createElement("input");
+            input.type = "hidden";
+            input.name = "id";
+            input.value = id;
+
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
 </body>
 </html>

@@ -32,8 +32,10 @@
             <th>Title</th>
         </tr>
         <?php
-            $adsObj = new AdvertisementsView();
-            $adsResutls = $adsObj->showAdvertisements();
+            $advModel = new Advertisement();
+            $advService = new AdvertisementService($advModel);
+            $advController = new AdvertisementController($advService);
+            $adsResutls = $advController->showAllAdvertisements();
 
             
             foreach($adsResutls as $row){
@@ -59,8 +61,10 @@
             <select id="dropdown" name="dropdown" required>
 
                 <?php
-                    $usersObj = new UsersView();
-                    $usersResults = $usersObj->showUsers();
+                    $userModel = new User();
+                    $userService = new UserService($userModel);
+                    $userController = new UserController($userService);
+                    $usersResults = $userController->showAllUsers();
                     foreach ($usersResults as $row){
                         echo "<option value='" . htmlspecialchars($row['id']) . "'>" . htmlspecialchars($row['name']) . "</option>";
                     } 
